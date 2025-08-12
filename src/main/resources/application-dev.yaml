@@ -1,0 +1,41 @@
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:h2:file:D:/others/Learing/h2/user/user_service;DB_CLOSE_DELAY=-1;
+    username: lang
+    password: lang123
+    driver-class-name: org.h2.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      pool-name: HikariCP
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: false
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+    hibernate:
+      ddl-auto: create
+jwt:
+  url: "/authorization"
+  header: "Authorization"
+  prefix: "Bearer"
+  expire: 120
+  secret: "b1ffd990d55bbdbd2259c22abec78d207889996b73b1d41873ffff755533e9c0"
+  default-password: "lang@123"
