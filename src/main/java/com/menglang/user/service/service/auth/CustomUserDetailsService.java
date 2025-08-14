@@ -1,7 +1,6 @@
-package com.menglang.user.service.service.impl;
+package com.menglang.user.service.service.auth;
 
 import com.menglang.user.service.constant.ApiConstant;
-import com.menglang.user.service.entity.model.Group;
 import com.menglang.user.service.entity.model.Role;
 import com.menglang.user.service.entity.model.User;
 import com.menglang.user.service.entity.model.UserPrincipal;
@@ -16,7 +15,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;

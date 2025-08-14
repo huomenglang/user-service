@@ -1,4 +1,4 @@
-package com.menglang.user.service.service.service;
+package com.menglang.user.service.service.jwt;
 
 import com.menglang.user.service.entity.model.UserPrincipal;
 import io.jsonwebtoken.Claims;

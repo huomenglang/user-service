@@ -1,4 +1,4 @@
-package com.menglang.user.service.service.service;
+package com.menglang.user.service.service.refreshToken;
 
 import com.menglang.user.service.dto.ResponseTemplate;
 import com.menglang.user.service.dto.requestToken.RefreshTokenReq;

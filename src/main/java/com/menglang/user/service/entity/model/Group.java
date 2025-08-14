@@ -43,6 +43,16 @@ public class Group extends AuditEntity<Long> {
     )
     private Set<Permission> permissions = new HashSet<>();
 
-//    @ManyToMany(mappedBy = "groups", fetch = FetchType.LAZY)
-//    private Set<User> users = new HashSet<>();
+    @ManyToMany(mappedBy = "groups", fetch = FetchType.LAZY)
+    private Set<User> users = new HashSet<>();
+
+    public void addUser(User user){
+        this.users.add(user);
+        user.getGroups().add(this);
+    }
+
+    public void removeUser(User user) {
+        this.users.remove(user);
+        user.getGroups().remove(this);
+    }
 }

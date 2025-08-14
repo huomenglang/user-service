@@ -1,4 +1,4 @@
-package com.menglang.user.service.service.impl;
+package com.menglang.user.service.service.role;
 
 import com.menglang.common.library.exceptions.common.BadRequestException;
 import com.menglang.common.library.exceptions.common.ConflictException;
@@ -7,20 +7,17 @@ import com.menglang.common.library.page.filter.FilterBy;
 import com.menglang.common.library.page.parser.BaseSpecification;
 import com.menglang.common.library.page.parser.PageableParser;
 import com.menglang.common.library.page.parser.QueryParamParser;
-import com.menglang.user.service.constant.ApiConstant;
 import com.menglang.user.service.dto.role.RoleMapper;
 import com.menglang.user.service.dto.role.RoleRequest;
 import com.menglang.user.service.dto.role.RoleResponse;
 import com.menglang.user.service.entity.model.Role;
 import com.menglang.user.service.repository.PermissionRepository;
 import com.menglang.user.service.repository.RoleRepository;
-import com.menglang.user.service.service.service.RoleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

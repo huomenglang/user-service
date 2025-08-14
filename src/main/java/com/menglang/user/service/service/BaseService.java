@@ -1,4 +1,4 @@
-package com.menglang.user.service.service.service;
+package com.menglang.user.service.service;
 
 import org.springframework.data.domain.Page;
 

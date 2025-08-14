@@ -4,7 +4,7 @@ import com.menglang.common.library.page.PageResponseHandler;
 import com.menglang.user.service.dto.permission.PermissionRequest;
 import com.menglang.user.service.dto.permission.PermissionResponse;
 import com.menglang.user.service.entity.model.Permission;
-import com.menglang.user.service.service.service.PermissionService;
+import com.menglang.user.service.service.permission.PermissionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

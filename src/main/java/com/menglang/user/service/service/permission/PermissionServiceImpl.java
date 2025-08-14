@@ -1,4 +1,4 @@
-package com.menglang.user.service.service.impl;
+package com.menglang.user.service.service.permission;
 import com.menglang.common.library.exceptions.common.ConflictException;
 import com.menglang.common.library.exceptions.common.NotFoundException;
 import com.menglang.common.library.page.filter.FilterBy;
@@ -11,7 +11,6 @@ import com.menglang.user.service.dto.permission.PermissionResponse;
 import com.menglang.user.service.entity.model.Permission;
 import com.menglang.user.service.exception.BaseException;
 import com.menglang.user.service.repository.PermissionRepository;
-import com.menglang.user.service.service.service.PermissionService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -21,7 +20,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @Slf4j
 @Service

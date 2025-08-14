@@ -1,4 +1,4 @@
-package com.menglang.user.service.service.service;
+package com.menglang.user.service.service.permission;
 
 
 import com.menglang.user.service.dto.permission.PermissionRequest;

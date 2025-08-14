@@ -6,7 +6,7 @@ import com.menglang.user.service.dto.role.RoleRequest;
 import com.menglang.user.service.dto.role.RoleResponse;
 import com.menglang.user.service.entity.model.Role;
 import com.menglang.user.service.repository.RoleRepository;
-import com.menglang.user.service.service.service.RoleService;
+import com.menglang.user.service.service.role.RoleService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

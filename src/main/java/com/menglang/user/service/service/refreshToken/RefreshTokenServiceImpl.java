@@ -1,4 +1,4 @@
-package com.menglang.user.service.service.impl;
+package com.menglang.user.service.service.refreshToken;
 
 import com.menglang.common.library.exceptions.common.BadRequestException;
 import com.menglang.user.service.constant.ApiConstant;
@@ -11,7 +11,7 @@ import com.menglang.user.service.entity.model.UserPrincipal;
 import com.menglang.user.service.exception.BaseException;
 import com.menglang.user.service.repository.RefreshTokenRepository;
 import com.menglang.user.service.repository.UserRepository;
-import com.menglang.user.service.service.service.RefreshTokenService;
+import com.menglang.user.service.service.auth.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
