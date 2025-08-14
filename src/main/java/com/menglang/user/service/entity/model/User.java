@@ -14,10 +14,10 @@ import java.util.Set;
 
 @Entity
 @Table(name = "tbl_users")
-@Setter
+//@AllArgsConstructor
+//@NoArgsConstructor
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
+@Setter
 public class User extends AuditEntity<Long> {
 
     @Column(name = "username", unique = true, nullable = false)
@@ -75,6 +75,5 @@ public class User extends AuditEntity<Long> {
             inverseJoinColumns = @JoinColumn(name = "group_id",referencedColumnName = "id")
     )
     private Set<Group> groups=new HashSet<>();
-
 
 }

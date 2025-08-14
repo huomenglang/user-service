@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,7 +16,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tbl_roles")
-public class Role extends AuditEntity<Long> {
+public class Role extends AuditEntity<Long> implements Serializable {
 
     @Column(name = "name", nullable = false, unique = true)
     private String name;
@@ -35,14 +35,11 @@ public class Role extends AuditEntity<Long> {
     )
     private Set<Permission> permissions=new HashSet<>();
 
-    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-    private Set<User> users = new HashSet<>();
-
-    @ManyToMany(mappedBy = "roles",fetch = FetchType.LAZY)
-    private Set<Group> groups=new HashSet<>();
-
-
-
+//    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
+//    private Set<User> users = new HashSet<>();
+//
+//    @ManyToMany(mappedBy = "roles",fetch = FetchType.LAZY)
+//    private Set<Group> groups=new HashSet<>();
 
 
 }
