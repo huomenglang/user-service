@@ -44,9 +44,9 @@ public class RoleController {
         return ResponseEntity.ok(roleService.delete(id));
     }
 
-    @GetMapping
+    @GetMapping("/get-all")
     public ResponseEntity<PageResponse> getAll(
-            @RequestParam(name = "params") Map<String,String>params
+            @RequestParam Map<String,String> params
     ) {
         Page<Role> rolePage = roleService.getAll(params);
         List<RoleResponse> roleResponseList=roleService.getPageContent(rolePage);

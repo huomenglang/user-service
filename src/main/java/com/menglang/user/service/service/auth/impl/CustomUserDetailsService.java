@@ -1,4 +1,4 @@
-package com.menglang.user.service.service.auth;
+package com.menglang.user.service.service.auth.impl;
 
 import com.menglang.user.service.constant.ApiConstant;
 import com.menglang.user.service.entity.model.Role;
@@ -70,14 +70,14 @@ public class CustomUserDetailsService implements UserDetailsService {
         );
     }
 
-    private Set<SimpleGrantedAuthority> extractRoleGrantAuthorities(Set<Role> roles) {
+    public Set<SimpleGrantedAuthority> extractRoleGrantAuthorities(Set<Role> roles) {
         Set<SimpleGrantedAuthority> roleAuthorities=roles.stream().map(r->new SimpleGrantedAuthority("ROLE_"+r.getName())).collect(Collectors.toSet());
         Set<SimpleGrantedAuthority> rolePermissions=roles.stream().flatMap(this::extractPermissions).collect(Collectors.toSet());
 
         rolePermissions.addAll(roleAuthorities);
         return rolePermissions;
     }
-    private Stream<SimpleGrantedAuthority> extractPermissions(Role role){
+    public Stream<SimpleGrantedAuthority> extractPermissions(Role role){
       return   role.getPermissions().stream().map(per->new SimpleGrantedAuthority(per.getName()));
     }
 }

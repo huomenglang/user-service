@@ -13,9 +13,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "tbl_users")
-//@AllArgsConstructor
-//@NoArgsConstructor
+@Table(name = "tbl_users",
+    indexes = {
+        @Index(name = "idx_username",columnList = "username")
+    }
+)
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class User extends AuditEntity<Long> {

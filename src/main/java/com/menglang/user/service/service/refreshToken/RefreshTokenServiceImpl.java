@@ -11,7 +11,7 @@ import com.menglang.user.service.entity.model.UserPrincipal;
 import com.menglang.user.service.exception.BaseException;
 import com.menglang.user.service.repository.RefreshTokenRepository;
 import com.menglang.user.service.repository.UserRepository;
-import com.menglang.user.service.service.auth.CustomUserDetailsService;
+import com.menglang.user.service.service.auth.impl.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

@@ -15,5 +15,5 @@ public class JwtConfigProperties {
     private String prefix;
     private Long expire;
     private String secret;
-//    private String default_password;
+    private String defaultPassword;
 }

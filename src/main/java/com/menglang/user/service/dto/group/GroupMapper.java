@@ -27,7 +27,7 @@ public interface GroupMapper {
 
         @Mapping(target = "permissions",source = "permissions",qualifiedByName = "toPermission")
         @Mapping(target = "roles",source ="roles",qualifiedByName = "toRole")
-       void updateGroup(GroupRequest request,@MappingTarget Group group,@Context RoleRepository roleRepository, @Context PermissionRepository permissionRepository);
+        void updateGroup(GroupRequest request,@MappingTarget Group group,@Context RoleRepository roleRepository, @Context PermissionRepository permissionRepository);
 
         @Named("toRole")
         default Set<Role> toRole(List<Long> ids, @Context RoleRepository roleRepository){

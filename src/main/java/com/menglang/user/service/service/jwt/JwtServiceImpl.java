@@ -4,7 +4,7 @@ import com.menglang.common.library.exceptions.common.BadRequestException;
 import com.menglang.user.service.configs.properties.JwtConfigProperties;
 import com.menglang.user.service.entity.model.UserPrincipal;
 import com.menglang.user.service.jwt.JwtSecret;
-import com.menglang.user.service.service.auth.CustomUserDetailsService;
+import com.menglang.user.service.service.auth.impl.CustomUserDetailsService;
 import com.menglang.user.service.service.refreshToken.RefreshTokenService;
 import io.jsonwebtoken.*;
 import lombok.RequiredArgsConstructor;

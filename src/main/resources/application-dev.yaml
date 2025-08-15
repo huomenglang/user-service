@@ -31,11 +31,11 @@ spring:
       hibernate:
         enable_lazy_load_no_trans: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
 jwt:
   url: "/authorization"
   header: "Authorization"
-  prefix: "Bearer"
+  prefix: "Bearer "
   expire: 120
   secret: "b1ffd990d55bbdbd2259c22abec78d207889996b73b1d41873ffff755533e9c0"
-#  default_password: "lang@123"
+  default-password: "123456"
